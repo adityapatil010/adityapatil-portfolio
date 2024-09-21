@@ -3,11 +3,11 @@ import "./style.css";
 import {
   FaGithub,
   FaTwitter,
-  FaFacebookF,
   FaLinkedin,
   FaYoutube,
   FaTwitch,
 } from "react-icons/fa";
+import CodolioIcon from '../../assets/images/codolio.svg'; 
 import { socialprofils } from "../../content_option";
 
 export const Socialicons = (params) => {
@@ -28,10 +28,10 @@ export const Socialicons = (params) => {
             </a>
           </li>
         )}
-        {socialprofils.facebook && (
+        {socialprofils.codolio && ( // Use Codolio icon instead of Facebook
           <li>
-            <a href={socialprofils.facebook}>
-              <FaFacebookF />
+            <a href={socialprofils.codolio}>
+              <img src={CodolioIcon} alt="Codolio" style={{ width: '20px', height: '20px' }} />
             </a>
           </li>
         )}

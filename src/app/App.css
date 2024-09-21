@@ -1,42 +1,93 @@
-@media only screen and (max-width: 991px) {
+.po_item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  
+  .po_item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+  }
+  
+  .po_item:hover img {
+    transform: scale(1.1);
+  }
+  
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Keep text color white */
+    opacity: 0;
+    transition: opacity 0.3s, background 0.3s; /* Added background transition */
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .po_item:hover .content {
+    opacity: 1;
+    background: black; /* Change background to black on hover */
+  }
+  
+  .content p {
+    margin: 0.5rem 0;
+  }
+  
+  .content a {
+    color: #007bff;
+    text-decoration: underline;
+  }
+  
+  .content a:hover {
+    text-decoration: none;
+  }
+  
+  @media only screen and (max-width: 991px) {
     .s_c {
-        padding-top: 40px;
+      padding-top: 40px;
     }
-}
-
-.page-enter {
+  }
+  
+  .page-enter {
     transform: translateY(100%);
-}
-
-.page-enter-active {
+  }
+  
+  .page-enter-active {
     transform: translateY(0%);
     transition: all 400ms ease-out;
-}
-
-.page-exit {
+  }
+  
+  .page-exit {
     transform: translateY(0%);
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
-}
-
-.page-exit-active {
+  }
+  
+  .page-exit-active {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     transform: translateY(-130%);
     transition: all 400ms ease-out;
-}
-
-@media (min-width: 1400px) {
+  }
+  
+  @media (min-width: 1400px) {
     .container,
     .container-lg,
     .container-md,
     .container-sm,
     .container-xl,
     .container-xxl {
-        max-width: 1140px;
+      max-width: 1140px;
     }
-}
+  }
+  
